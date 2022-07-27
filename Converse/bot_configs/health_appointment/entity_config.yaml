@@ -3,6 +3,12 @@ Entity:
     type: CARDINAL
     methods:
       ner:
+  state:
+    type: 
+      - ZIPCODE
+      - AP/LOCATION
+    methods:
+      ner:
   birthday:
     type: DATE
     methods:
@@ -19,15 +25,10 @@ Entity:
     type: PICKLIST
     methods:
       fuzzy_matching:
-        - ICU
-        - Elderly services
-        - Diagnostic Imaging
-        - General Surgery
-        - Neurology
-        - Microbiology
-        - Nutrition and Dietetics
+        - Therapist
+        - Doctor
     suggest_value: yes
-  doctor_name:
+  providers_name:
     type: PERSON
     methods:
       ner:
