@@ -314,46 +314,36 @@ FAQ:
       - nli
    depressed:
     samples:
-      - You are amazing!
+      - I don't feel very well lately, I don't want to do anything, sometimes I have thoughts of death. Can you help me?
+      - I'm depressed. I need help
+      - I'm not doing well, can you help me?
+      - I'm looking for help because I'm not coping
+      - I need help because I'm feeling really down
+      - I'm depressed. How can Wellnite help me?
     answers:
       - I'm very sorry to hear that. But therapy can definitely help you if you're feeling down and struggling with thoughts of death. It's important to talk to someone about how you're feeling so that they can help you develop coping mechanisms and work through whatever is causing these negative feelings. If left untreated, depression can worsen, so please do not hesitate to contact us for professional help. Would you like to pursue therapy with our licensed therapists via video call on the platform?
       - I'm very sorry to hear that. I can help you with this, don't worry. 🙏🏽 Whether you’re new to therapy or looking for a better therapist, you’re in a safe and welcoming place. We have 100+ therapists on our platform and we will be sending some of their profiles to you for you to review and approve to see if they will be a better fit. Does that work for you? We would be the ones to help you throughout since you will be subscribed.
+      - Yes, therapy can be very helpful. If you are feeling like this, please reach out to our therapist, we can help you explore your feelings and develop a plan to keep yourself safe. 🌸
+      - Therapy with Welnite can definitely help you. It's important to talk to someone about how you're feeling so that they can help you develop coping mechanisms and work through whatever is causing these negative feelings. If left untreated, depression can worsen, so please do not hesitate to contact us for professional help. Would you like to pursue therapy with our licensed therapists via video call on the platform?
+      - I'm sorry to hear that you're feeling bad. 🙏 Our team is here to support you and we want to make sure you're getting the most out of Wellnite. 🌸 Please rest assured that we have a diverse team of therapists and doctors who will be able to help you with all your needs. 🙏 For our new users, we offer 3 plans: 1) Therapy + medicine 2) Medicine only 3) Therapy only. More details here: https://www.wellnite.co/plans Which plan would you like to go for?
+      - Thanks for reaching out 🙏 We would be happy to help you with anything you need. Whether it is stress, depression, anxiety or other mental conditions, our platform can give you access to the best resources available for a happier and healthier life! 🌸 😊 For our new users, we offer 3 plans: 1) Therapy + medicine 2) Medicine only 3) Therapy only. More details here: https://www.wellnite.co/plans Which plan would you like to go for?
+      - Psychotherapy can be an effective treatment for a wide variety of mental health conditions. It can help people to manage their symptoms, understand and cope with their emotions, and make positive changes in their lives. Whether you’re new to therapy or looking for a better therapist, you’re in a safe and welcoming place. We have 100+ therapists on our platform and we will be sending some of their profiles to you for you to review and approve to see if they will be a better fit.
     question_match_options:
-      - nlicompliment:
+      - nli
+   when_treatment_result:
     samples:
-      - You are amazing!
+      - How long does it take for a treatment to work?
     answers:
-      - Thanks! I'm flattered:)
-    question_match_options:
-      - nlicompliment:
-    samples:
-      - You are amazing!
-    answers:
-      - Thanks! I'm flattered:)
-    question_match_options:
-      - nlicompliment:
-    samples:
-      - You are amazing!
-    answers:
-      - Thanks! I'm flattered:)
-    question_match_options:
-      - nlicompliment:
-    samples:
-      - You are amazing!
-    answers:
-      - Thanks! I'm flattered:)
-    question_match_options:
-      - nlicompliment:
-    samples:
-      - You are amazing!
-    answers:
-      - Thanks! I'm flattered:)
+      - That varies by person and by treatment. If your Wellnite doctor prescribes medication, they can estimate how long it might take for the drug to work. There are several different classes of antidepressants and they work within the body in different ways. For many antidepressant drugs, it’s common for it to take several weeks before the effects are noticed. For therapy sessions, you may want to discuss with your therapists and plan your visits accordingly. 
     question_match_options:
       - nli
    compliment:
     samples:
       - You are amazing!
+      - Best work!
+      - You so smart!
     answers:
       - Thanks! I'm flattered:)
+      - Thank you! It's a pleasure.
     question_match_options:
       - nli
