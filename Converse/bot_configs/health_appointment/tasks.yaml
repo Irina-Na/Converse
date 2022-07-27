@@ -1,6 +1,6 @@
 Bot:
   text_bot: true
-  bot_name: Nurse Nancy
+  bot_name: MS team Wellnite bot
 Task:
   positive:
     description: polarity
@@ -33,6 +33,7 @@ Task:
     entities:
       ssn:
         function: verify_ssn
+ 
         confirm: no
         prompt:
           - May I have the last four digits of your social security number?
@@ -96,12 +97,6 @@ Task:
         prompt:
           - May I have your preferred doctor name?
         response:
-      covid_protocol:
-        function: covid_protocol
-        confirm: no
-        prompt:
-        response:
-          - <info>
       have_health_insurance:
         function: check_condition
         confirm: no
@@ -129,8 +124,6 @@ Task:
       department_doctor_group:
         - department
         - doctor_name
-      covid_protocol_group:
-        - covid_protocol
       have_health_insurance_group:
         - have_health_insurance
       name_birthday_group:
@@ -149,9 +142,7 @@ Task:
             - TASK:
               - get_health_insurance_info
           - INSERT:
-            - name_birthday_group
-        - INFORM:
-          - covid_protocol_group
+            - name_birthday_group       
     finish_response:
       success:
         - I have booked an appointment for you.
@@ -162,3 +153,207 @@ Task:
     repeat_response:
       - Would you like to make another appointment?
     max_turns: 10
+FAQ:
+  conditions_of_changing_treatment:
+    samples:
+      - Can I change my treatment if it isn’t working?
+      - Can I swap treatments if one isn't effective?
+      - Can I change treatment if it is ineffective?
+      - If the treatment isn't working, can I change it?
+    answers:
+      - Yes, if you feel like your medication or treatment is not a good fit for you; you can get an appointment with your Dr. right away. During your regular follow-up calls, you can also explain to your doctor if a treatment isn’t working. Your doctor may decide to modify the treatment or change it altogether. If you need to report a side effect or aren’t sure whether you can keep taking your medication, you can text our nurse support line: (415) 449-7796 Support is available 12 hours/day, 6 days/week to help you with all your treatment needs.
+    question_match_options:
+      - nli
+  conditions_of_changing_therapist:
+    samples:
+      - Can we switch my therapist at any time if I am not finding him/her useful?
+      - Can I change therapists if I'm not finding the one I have useful?
+      - If I'm not finding my therapist helpful, can I switch to a different one?
+    answers:
+      - Of course, simply text us our support number 415-449-7796. This number is for our current members. If you want to join Wellnite program and need help booking an initial appointment, schedule a free online consultation with our onboarding specialist. 
+    question_match_options:
+      - nli
+  not_necessary_to_have_insurance:
+    samples:
+      - Can I use your services without insurance?
+      - Do I need insurance to book an appointment?
+    answers:
+      - Absolutely not! Wellnite is voted as the most affordable mental health platform in United States. We offer affordable pricing: https://www.wellnite.co/plans. Please register an account with us! Please reach out to our onboarding specialing during your free intial consultation or call us at 341-888-7638    question_match_options:
+      - nli
+   show_insurances_list:
+    samples:
+      - Can I use my insurance?
+      - Do you accept insurance?
+      - I wanted to know if you all took my insurance, before I went ahead with the sessions.
+      - Do you only accept cash or do you take insurance?
+      - Which insurances do you currently work with?
+      - I believe this session should be covered by my insurance Harvard Pilgrim Health Care please confirm that it is
+      - Do you accept MagnaCare?
+      - I want to confirm you take my insurance
+      - Is anthem gold ppo insurance accepted?
+    answers:
+    - A variety of insurance plans are accepted, but on different terms. You can use this link to check if your insurance is on the list we work with: www.wellnite.com/insurances Thank you😊
+    question_match_options:
+      - nli
+  conditions_of_changing_therapist:
+    samples:
+      - Can we switch my therapist at any time if I am not finding him/her useful?
+      - Can I change therapists if I'm not finding the one I have useful?
+      - If I'm not finding my therapist helpful, can I switch to a different one?
+    answers:
+      - Of course, simply text us our support number 415-449-7796. This number is for our current members. If you want to join Wellnite program and need help booking an initial appointment, schedule a free online consultation with our onboarding specialist. 
+    question_match_options:
+      - nli
+   show_plans_link:
+    samples:
+      - What pricing you have?
+      - What are your rates?
+      - When I can see the prices?
+      - How much do your services cost?
+      - How much does treatments normally cost?
+      - Why is it profitable with you?
+      - Why is it profitable with Wellnite?
+    answers:
+      - Wellnite is voted as the most affordable mental health platform in United States. We offer affordable pricing: https://www.wellnite.co/plans. Please register an account with us! Please reach out to our onboarding specialing during your free intial consultation or call us at 341-888-7637
+      - A whole lot. Depending on which doctor you use, which drugs you take, and whether you use insurance, traditional treatment can cost $200-$500 a visit. We’ve seen many pay costs that are much, much higher. That’s why we started Wellnite to finally bring people a real solution. Our pricing plan starts at $37.5.  Check out our pricing page to see how Wellnite compares to the cost of traditional treatment. Our pricing plan: https://www.wellnite.co/plans
+    question_match_options:
+      - nli
+   referral_program:
+    samples:
+      - Do you have referring program?
+      - Can I get a discount if I refer someone to you?
+      - Do you offer a referral program?
+    answers:
+      - Yes, you can help by referring Wellnite to your friends! Please go to https://www.wellnite.com/referral
+    question_match_options:
+      - nli
+   terms_of_communication:
+    samples:
+      - How will I communicate with my therapists?
+      - How do I talk with my provider?
+    answers:
+      - You will communicate with your therapist either via phoen call session or video call session.
+      - You’ll speak with your provider over video or phone, from the privacy and comfort of anywhere you want to be. We think it’s easier for you to focus on treatment when you’re not made to go out of your way or be uncomfortable.
+    question_match_options:
+      - nli
+   description_therapist_schedule:
+    samples:
+      - How can I make sure therapy fits into my schedule?
+      - How can I be sure that therapy will fit into my schedule?
+      - How do I know if therapy will fit into my schedule?
+      - Do you work in the evenings and on weekends? I want to make sure that therapy fits into my schedule.
+    answers:
+      - During your intial consultation, our onboarding specailist will match you with a therapist that best fits your schedule. We have therapists available on the weekends, early mornings, late nights and the usual 9am-5pm work hours.
+    question_match_options:
+      - nli
+   description_Wellnite_Doctors_qualifications:
+    samples:
+      - Who are Wellnite Doctors?
+      - What are the qualifications of your doctors?
+    answers:
+      - Wellnite Doctors are Board Certified physicians who regularly treat patients for depression and anxiety. We’ll pair you with a doctor who is licensed in your state. Our doctors are passionate about bringing quality medical care to people who need it. We know you’ll have a great experience working with them.
+    question_match_options:
+      - nli
+   description_Wellnite_Therapists_qualifications:
+    samples:
+      - Who are Wellnite Therapists?
+      - How qualified are your therapists?
+    answers:
+      - Wellnite therapists are hand-picked, licence verified Psychotherapists who regularly treat patients for several mental conditions. We’ll pair you with a therapist who is licensed in your state. Our therapists are compassionate about improving people’s life and help them heal those who are hurting. We know you’ll have a great experience working with them. You can look at some of their profiles here: https://www.wellnite.com/provider/therapist
+    question_match_options:
+      - nli
+   doctor_follow-ups_conditions:
+    samples:
+      - How often would I need to follow up with my Wellnite doctor?
+      - What is the frequency of doctors appointments?
+      - How many appointments would I need with a Wellnite doctor?
+    answers:
+      - You’ll have monthly doctor follow-ups, just like you would in a traditional setting, but with Wellnite it all takes place over video.
+    question_match_options:
+      - nli
+   therapist_follow-ups_conditions:
+    samples:
+      - How many appointments would I need with a Wellnite therapist?
+      - How often would I need to follow up with my Therapist?
+    answers:
+      - There is no limit to how many sessions you can have with your therapist. During your first appointment, your therapist will discuss with you and come up with a plan of number of sessions per month. However, you can always get an appointment with your therapist if you feel there is a need for that. You can reach out to our customer support team to assist you with it.
+    question_match_options:
+      - nli
+   consistency_frequency:
+    samples:
+      - What is the frequency of psyhoterapy should be?
+      - Also do you have a weekly option?
+      - What if I would prefer not to use a prescription but a visit by visit basis?
+    answers:
+      - In therapy, consistency and frequency are two key factors to provide you with the outcomes you’re looking for. This is why we offer you 3 therapy sessions per month. For that concern, it is our protocol to check back in with you after your first session to have feedback on how your therapy went and how's your therapist. In rare cases that your therapist is not a right fit for you, we have 100+ therapists on our platform and we will be sending some of their profiles to you for you to review and approve to see if they will be a better fit. Does that work for you? We would be the ones to help you throughout since you will be subscribed.
+    question_match_options:
+      - nli
+   emergency:
+    samples:
+      - Who do I call in an emergency?
+      - What is your emergency contact information?
+      - What is emergency contact information?
+      - Who can I call if there is an emergency?
+      - What is the best way to contact you in an emergency?
+    answers:
+      - Please note that Wellnite is not an emergency service. For acute medical emergencies, call 911. For self-harm emergencies call the National Suicide Prevention Lifeline at 1-800-273-8255. Be safe.
+    question_match_options:
+      - nli
+   drug_delivery_conditions:
+    samples:
+      - Do you prescribe controlled substances?
+      - Can I get a prescription for a controlled substance from you?
+      - Can you prescribe medication that is a controlled substance?
+      - What type of medications do you prescribe?
+      - What sort of drugs can you prescribe?
+      - Can you prescribe any medications?
+      - Can you prescribe any medicines?
+    answers:
+      - Due to Telehealth laws and regulations, Wellnite doctors cannot prescribe controlled medications such as narcotics and benzodiazepines. If you’re currently taking these or any other medications, your Wellnite doctor needs to know. This way, we can check for interactions with any potential treatment we prescribe.
+    question_match_options:
+      - nli
+   depressed:
+    samples:
+      - You are amazing!
+    answers:
+      - I'm very sorry to hear that. But therapy can definitely help you if you're feeling down and struggling with thoughts of death. It's important to talk to someone about how you're feeling so that they can help you develop coping mechanisms and work through whatever is causing these negative feelings. If left untreated, depression can worsen, so please do not hesitate to contact us for professional help. Would you like to pursue therapy with our licensed therapists via video call on the platform?
+      - I'm very sorry to hear that. I can help you with this, don't worry. 🙏🏽 Whether you’re new to therapy or looking for a better therapist, you’re in a safe and welcoming place. We have 100+ therapists on our platform and we will be sending some of their profiles to you for you to review and approve to see if they will be a better fit. Does that work for you? We would be the ones to help you throughout since you will be subscribed.
+    question_match_options:
+      - nlicompliment:
+    samples:
+      - You are amazing!
+    answers:
+      - Thanks! I'm flattered:)
+    question_match_options:
+      - nlicompliment:
+    samples:
+      - You are amazing!
+    answers:
+      - Thanks! I'm flattered:)
+    question_match_options:
+      - nlicompliment:
+    samples:
+      - You are amazing!
+    answers:
+      - Thanks! I'm flattered:)
+    question_match_options:
+      - nlicompliment:
+    samples:
+      - You are amazing!
+    answers:
+      - Thanks! I'm flattered:)
+    question_match_options:
+      - nlicompliment:
+    samples:
+      - You are amazing!
+    answers:
+      - Thanks! I'm flattered:)
+    question_match_options:
+      - nli
+   compliment:
+    samples:
+      - You are amazing!
+    answers:
+      - Thanks! I'm flattered:)
+    question_match_options:
+      - nli
